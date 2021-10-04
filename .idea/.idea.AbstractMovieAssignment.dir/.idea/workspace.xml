@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a30e67-a412-4975-90d1-b5d9a4d1e3d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testclass.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractMovieAssignment.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractMovieAssignment.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileManagers/CsvFileHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FileManagers/CsvFileHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Files/movies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Files/movies.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/log_file.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/AbstractMovieAssignment.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.AssemblyReference.cache" afterDir="false" />
@@ -22,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/AbstractMovieAssignment.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
@@ -53,7 +58,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.AbstractMovieAssignment">
     <configuration name="AbstractMovieAssignment" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -82,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633375215437</updated>
       <workItem from="1633375231349" duration="1114000" />
+      <workItem from="1633380812019" duration="661000" />
     </task>
     <servers />
   </component>
@@ -89,7 +95,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -101,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

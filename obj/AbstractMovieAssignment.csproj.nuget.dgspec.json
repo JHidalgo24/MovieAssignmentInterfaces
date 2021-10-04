@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj": {}
+    "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj": {}
   },
   "projects": {
-    "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj": {
+    "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
+        "projectUniqueName": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj",
         "projectName": "AbstractMovieAssignment",
-        "projectPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
+        "projectPath": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj",
         "packagesPath": "/Users/justinhidalgo/.nuget/packages/",
-        "outputPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/obj/",
+        "outputPath": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/justinhidalgo/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[27.1.1, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
             "NLog.Config": {
               "target": "Package",
               "version": "[4.7.11, )"
@@ -49,6 +53,10 @@
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.14.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2-pre.12, )"
             }
           },
           "imports": [
