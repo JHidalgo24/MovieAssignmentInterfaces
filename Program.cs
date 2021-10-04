@@ -30,7 +30,6 @@ namespace AbstractMovieAssignment
                         CsvFileHelper.Movies();
                         if (choice == 1)
                         {
-                            Console.Clear();
                             Console.WriteLine("What would you like to search?(Enter for all)");
                             string search = Console.ReadLine();
                             CsvFileHelper.SearchMedia("Movie", search);
@@ -69,7 +68,6 @@ namespace AbstractMovieAssignment
                         CsvFileHelper.Shows();//reads the videos file and makes the list for it in the CSVFile Class
                         if (choice == 1)
                         {
-                            Console.Clear();
                             Console.WriteLine("What would you like to search?(Enter for all)");
                             string search = Console.ReadLine();
                             CsvFileHelper.SearchMedia("Show", search);
@@ -107,7 +105,6 @@ namespace AbstractMovieAssignment
                         CsvFileHelper.Videos();//reads the videos file and makes the list for it in the CSVFile Class
                         if (choice == 1)
                         {
-                            Console.Clear();
                             Console.WriteLine("What would you like to search?(Enter for all)");
                             string search = Console.ReadLine();
                             CsvFileHelper.SearchMedia("Video", search);

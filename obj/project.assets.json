@@ -447,24 +447,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/justinhidalgo/.nuget/packages/": {}
+    "C:\\Users\\justi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
+      "projectUniqueName": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj",
       "projectName": "AbstractMovieAssignment",
-      "projectPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
-      "packagesPath": "/Users/justinhidalgo/.nuget/packages/",
-      "outputPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/obj/",
+      "projectPath": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj",
+      "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/justinhidalgo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -514,7 +516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
