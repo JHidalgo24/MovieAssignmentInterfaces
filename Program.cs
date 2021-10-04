@@ -116,6 +116,11 @@ namespace AbstractMovieAssignment
                             int id = CsvFileHelper.VideoList.Count;
                             Console.WriteLine("What is the title of the video?");
                             string title = Console.ReadLine();
+                            while (DuplicateChecker(title,"Video"))
+                            {
+                                Console.WriteLine("This Video already exists enter a new title");
+                                title = Console.ReadLine();
+                            }
                             Console.WriteLine("How many formats is the video on?");
                             int formatTotals = Menu.ValueGetter();
                             for (int i = 0; i < formatTotals; i++)

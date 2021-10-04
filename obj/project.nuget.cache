@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "zsu3RGRlOS23spleAo4318Uc4JNPOh6gCwGPjw8FaaksGk5XSUGqSJTxmOIV7eBNI1jMUzJRy2pigvb5hzXnEw==",
+  "dgSpecHash": "kE2vPysv/CLSrgF9gEpk5E7Q5qI21WTrBfiG3gWrp4hmMoDhUE+6DCVfogGW28pii9hvNQbk95jf2iWssn1Log==",
   "success": true,
-  "projectFilePath": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj",
+  "projectFilePath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\justi\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nlog.config\\4.7.11\\nlog.config.4.7.11.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nlog.schema\\4.7.11\\nlog.schema.4.7.11.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nlog.web.aspnetcore\\4.14.0\\nlog.web.aspnetcore.4.14.0.nupkg.sha512"
+    "/Users/justinhidalgo/.nuget/packages/csvhelper/27.1.1/csvhelper.27.1.1.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.0/microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.logging/5.0.0/microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/nlog/4.7.11/nlog.4.7.11.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/nlog.config/4.7.11/nlog.config.4.7.11.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/nlog.extensions.logging/1.7.4/nlog.extensions.logging.1.7.4.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/nlog.schema/4.7.11/nlog.schema.4.7.11.nupkg.sha512",
+    "/Users/justinhidalgo/.nuget/packages/nlog.web.aspnetcore/4.14.0/nlog.web.aspnetcore.4.14.0.nupkg.sha512"
   ],
   "logs": []
 }

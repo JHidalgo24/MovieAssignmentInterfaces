@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj": {}
+    "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj": {
+    "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj",
+        "projectUniqueName": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
         "projectName": "AbstractMovieAssignment",
-        "projectPath": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\AbstractMovieAssignment.csproj",
-        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\justi\\Documents\\AbstractClassMovie\\obj\\",
+        "projectPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/AbstractMovieAssignment.csproj",
+        "packagesPath": "/Users/justinhidalgo/.nuget/packages/",
+        "outputPath": "/Users/justinhidalgo/Documents/AbstractMovieAssignment/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/justinhidalgo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }
