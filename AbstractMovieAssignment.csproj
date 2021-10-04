@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="27.1.1" />
+      <PackageReference Include="NLog.Config" Version="4.7.11" />
+      <PackageReference Include="NLog.Web.AspNetCore" Version="4.14.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Files\movies.csv" />
+      <EmbeddedResource Include="Files\movies.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Files\shows.csv" />
+      <EmbeddedResource Include="Files\shows.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Files\videos.csv" />
+      <EmbeddedResource Include="Files\videos.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="NLog.config" />
+      <EmbeddedResource Include="NLog.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="log_file.log" />
+      <EmbeddedResource Include="log_file.log">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
