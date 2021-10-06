@@ -7,34 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13a30e67-a412-4975-90d1-b5d9a4d1e3d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AbstractMovieAssignment.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AbstractMovieAssignment.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractMovieAssignment.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileManagers/CsvFileHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FileManagers/CsvFileHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediaObjects/Shows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MediaObjects/Shows.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/AbstractMovieAssignment.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Files/movies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Files/movies.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Files/shows.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Files/shows.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/log_file.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/AbstractMovieAssignment.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AbstractMovieAssignment.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/AbstractMovieAssignment.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/AbstractMovieAssignment.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/AbstractMovieAssignment.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="13a30e67-a412-4975-90d1-b5d9a4d1e3d5" name="Changes" comment="Fixed file writing to show and video" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +65,14 @@
       <workItem from="1633375231349" duration="1114000" />
       <workItem from="1633380812019" duration="661000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed file writing to show and video">
+      <created>1633485291790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633485291790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,5 +95,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Fixed file writing" />
+    <MESSAGE value="Fixed file writing to show and video" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed file writing to show and video" />
   </component>
 </project>
