@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj": {}
+    "/Users/justinhidalgo/Documents/MovieAssignment/AbstractMovieAssignment.csproj": {}
   },
   "projects": {
-    "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj": {
+    "/Users/justinhidalgo/Documents/MovieAssignment/AbstractMovieAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj",
+        "projectUniqueName": "/Users/justinhidalgo/Documents/MovieAssignment/AbstractMovieAssignment.csproj",
         "projectName": "AbstractMovieAssignment",
-        "projectPath": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj",
+        "projectPath": "/Users/justinhidalgo/Documents/MovieAssignment/AbstractMovieAssignment.csproj",
         "packagesPath": "/Users/justinhidalgo/.nuget/packages/",
-        "outputPath": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/obj/",
+        "outputPath": "/Users/justinhidalgo/Documents/MovieAssignment/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/justinhidalgo/.nuget/NuGet/NuGet.Config"

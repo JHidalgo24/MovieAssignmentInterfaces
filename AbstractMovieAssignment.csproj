@@ -17,15 +17,15 @@
     <ItemGroup>
       <None Remove="Files\movies.csv" />
       <EmbeddedResource Include="Files\movies.csv">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <None Remove="Files\shows.csv" />
       <EmbeddedResource Include="Files\shows.csv">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <None Remove="Files\videos.csv" />
       <EmbeddedResource Include="Files\videos.csv">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <None Remove="NLog.config" />
       <EmbeddedResource Include="NLog.config">
@@ -33,7 +33,7 @@
       </EmbeddedResource>
       <None Remove="log_file.log" />
       <EmbeddedResource Include="log_file.log">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
 

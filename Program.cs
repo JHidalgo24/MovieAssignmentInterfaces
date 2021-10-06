@@ -2,6 +2,7 @@
 using System.Net.Http.Headers;
 using NLog;
 using System.Collections.Generic;
+using System.Linq;
 using AbstractMovieAssignment.FileManagers;
 
 namespace AbstractMovieAssignment
@@ -25,13 +26,14 @@ namespace AbstractMovieAssignment
                     //movies
                     case 1:
                         Console.WriteLine("Do you want to\n1.)Display\n2.)Add");
-                        logger.Trace("User chose option 1");
+                        logger.Trace("User chose option 1: Movies");
                         choice = Menu.ValueGetter();
                         CsvFileHelper.Movies();
                         switch (choice)
                         {
                             case 1:
                             {
+                                logger.Trace("User chose to search movies");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 string search = Console.ReadLine();
                                 CsvFileHelper.SearchMedia("Movie", search);
@@ -39,8 +41,9 @@ namespace AbstractMovieAssignment
                             }
                             case 2:
                             {
+                                logger.Trace("User chose to add movie");
                                 List<string> genresPicked = new List<string>();
-                                int id = CsvFileHelper.MovieList.Count;
+                                int id = CsvFileHelper.MovieList.Last().Id+1;
                                 System.Console.WriteLine("What is the title of the film?");
                                 string title = Console.ReadLine();
                                 Console.WriteLine("What year was the movie made in?");
@@ -64,12 +67,14 @@ namespace AbstractMovieAssignment
                                 break;
                             }
                             default:
+                                logger.Trace("User made invalid input");
                                 Console.WriteLine("Sorry not a choice!");
                                 break;
                         }
                         break;
                     //Shows
                     case 2:
+                        logger.Trace("User chose option 2: Shows");
                         Console.WriteLine("Do you want to\n1.)Display \n2.)Add");
                         choice = Menu.ValueGetter();
                         CsvFileHelper.Shows();//reads the videos file and makes the list for it in the CSVFile Class
@@ -77,6 +82,7 @@ namespace AbstractMovieAssignment
                         {
                             case 1:
                             {
+                                logger.Trace("User chose to search shows");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 string search = Console.ReadLine();
                                 CsvFileHelper.SearchMedia("Show", search);
@@ -84,8 +90,9 @@ namespace AbstractMovieAssignment
                             }
                             case 2:
                             {
+                                logger.Trace("User chose to add show");
                                 List<string> writers = new List<string>();
-                                int id = CsvFileHelper.ShowsList.Count;
+                                int id = CsvFileHelper.ShowsList.Last().Id + 1;
                                 Console.WriteLine("What is the title of the show?");
                                 string title = Console.ReadLine();
                                 while (DuplicateChecker(title, "Show"))
@@ -108,19 +115,22 @@ namespace AbstractMovieAssignment
                                 break;
                             }
                             default:
+                                logger.Trace("User made invalid input");
                                 Console.WriteLine("Sorry not a choice!");
                                 break;
                         }
                         break;
                     //Videos
                     case 3:
-                        Console.WriteLine("Do you want to \n1.)Display\n2.)Add?");
+                        logger.Trace("User chose option 3:Videos");
+                        Console.WriteLine("Do you want to \n1.)Display\n2.)Add");
                         choice = Menu.ValueGetter();
                         CsvFileHelper.Videos();//reads the videos file and makes the list for it in the CSVFile Class
                         switch (choice)
                         {
                             case 1:
                             {
+                                logger.Trace("User chose to search videos ");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 string search = Console.ReadLine();
                                 CsvFileHelper.SearchMedia("Video", search);
@@ -128,9 +138,10 @@ namespace AbstractMovieAssignment
                             }
                             case 2:
                             {
+                                logger.Trace("User chose to add a video");
                                 List<string> regions = new List<string>();
                                 List<string> formats = new List<string>();
-                                int id = CsvFileHelper.VideoList.Count;
+                                int id = CsvFileHelper.VideoList.Last().Id + 1;
                                 Console.WriteLine("What is the title of the video?");
                                 string title = Console.ReadLine();
                                 while (DuplicateChecker(title,"Video"))
@@ -161,6 +172,7 @@ namespace AbstractMovieAssignment
                                 break;
                             }
                             default:
+                                logger.Trace("User made an invalid input");
                                 Console.WriteLine("Sorry not a choice!");
                                 break;
                         }
@@ -223,5 +235,6 @@ namespace AbstractMovieAssignment
 
             return contained;
         }
+        
     }
 }

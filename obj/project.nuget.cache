@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ueGKs6n8/ZTiibzKZDJhl5x2vn0mx04CD/uoUrxLw5jAUZFX66C7wlrEo4m+xi0KooBWbQAiUjyaB67r0mLrow==",
+  "dgSpecHash": "3Lw/cCu5j3t8x96xFRHSH+oIWEJpoQm4GMGEVx1nRb3Zf4B/kKJ1H5zBMsvUSus6BZWhMsVIsuYPa4OMfMsKNQ==",
   "success": true,
-  "projectFilePath": "/Users/justinhidalgo/RiderProjects/AbstractClassMovie/AbstractMovieAssignment.csproj",
+  "projectFilePath": "/Users/justinhidalgo/Documents/MovieAssignment/AbstractMovieAssignment.csproj",
   "expectedPackageFiles": [
     "/Users/justinhidalgo/.nuget/packages/csvhelper/27.1.1/csvhelper.27.1.1.nupkg.sha512",
     "/Users/justinhidalgo/.nuget/packages/microsoft.codecoverage/16.11.0/microsoft.codecoverage.16.11.0.nupkg.sha512",
