@@ -1,7 +1,7 @@
-using AbstractMovieAssignment.MediaObjects;
 using CsvHelper.Configuration;
+using MovieAssignmentInterfaces.MediaObjects;
 
-namespace AbstractMovieAssignment.ClassMaps
+namespace MovieAssignmentInterfaces.ClassMaps
 {
     public class ShowClassMap:ClassMap<Shows>
     {
@@ -11,7 +11,7 @@ namespace AbstractMovieAssignment.ClassMaps
             Map(m => m.title).Index(1).Name("title");
             Map(m => m.season).Index(2).Name("season");
             Map(m => m.episode).Index(3).Name("episode");
-            Map(m => m.writersString).Index(4).Name("writers");
+            Map(m => m.writers).Index(4).Name("writers");
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AbstractMovieAssignment.FileManagers;
+using MovieAssignmentInterfaces.FileManagers;
+using MovieAssignmentInterfaces.MediaObjects;
 using NLog;
 
-namespace AbstractMovieAssignment
+namespace MovieAssignmentInterfaces
 {
     internal class Program
     {
-        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private static readonly CsvFileHelper CsvFileHelper = new();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private static CsvFileHelper CsvFileHelper = new();
         private static readonly Menu Menu = new();
 
         private static void Main(string[] args)
@@ -20,6 +21,8 @@ namespace AbstractMovieAssignment
             {
                 Menu.Display();
                 option = Menu.ValueGetter();
+
+
                 switch (option)
                 {
                     //movies
@@ -57,13 +60,13 @@ namespace AbstractMovieAssignment
 
                                 Console.WriteLine("How many genres do you want to add?");
                                 var genreAmount = Menu.ValueGetter();
+                                string[] genres = new string[genreAmount];
                                 for (var i = 0; i < genreAmount; i++)
                                 {
                                     Console.WriteLine($"What is the {i + 1} genre?");
-                                    genresPicked.Add(Console.ReadLine());
+                                    genres[i] = Console.ReadLine();
                                 }
-
-                                CsvFileHelper.MovieAdd(id, title, string.Join("|", genresPicked));
+                                CsvFileHelper.MovieAdd(id, title, genres.ToList());
                                 break;
                             }
                             default:
@@ -114,7 +117,7 @@ namespace AbstractMovieAssignment
                                     writers.Add(Console.ReadLine());
                                 }
 
-                                CsvFileHelper.ShowAdd(id, title, seasons, episodes, string.Join('|', writers));
+                                CsvFileHelper.ShowAdd(id, title, seasons, episodes, writers);
                                 break;
                             }
                             default:
@@ -143,7 +146,7 @@ namespace AbstractMovieAssignment
                             case 2:
                             {
                                 logger.Trace("User chose to add a video");
-                                var regions = new List<string>();
+                                var regions = new List<int>();
                                 var formats = new List<string>();
                                 var id = CsvFileHelper.VideoList.Last().Id + 1;
                                 Console.WriteLine("What is the title of the video?");
@@ -161,9 +164,6 @@ namespace AbstractMovieAssignment
                                     Console.WriteLine($"Format #{i + 1}");
                                     formats.Add(Console.ReadLine());
                                 }
-
-                                Console.WriteLine("What is the format of the video? Ex.DVD,Bluray,VHS");
-                                var format = Console.ReadLine();
                                 Console.WriteLine("How many minutes long is the video?");
                                 var length = Menu.ValueGetter();
                                 Console.WriteLine("How many regions is it in?");
@@ -175,11 +175,10 @@ namespace AbstractMovieAssignment
                                     Console.WriteLine($"Region #{i + 1}?");
                                     Console.WriteLine(
                                         "0.)North America\n1.)South America\n2.)Europe\n3.)Asia\n4.)Australia\n5.)Antarctica");
-                                    regions.Add(Console.ReadLine());
+                                    regions.Add(Menu.ValueGetter());
                                 }
 
-                                CsvFileHelper.VideoAdd(id, title, string.Join('|', format), length,
-                                    string.Join('|', regions));
+                                CsvFileHelper.VideoAdd(id, title, formats, length, regions);
                                 break;
                             }
                             default:

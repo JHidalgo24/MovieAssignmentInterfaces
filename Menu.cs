@@ -1,6 +1,6 @@
 using System;
 
-namespace AbstractMovieAssignment
+namespace MovieAssignmentInterfaces
 {
     public class Menu
     {

@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace AbstractMovieAssignment
+namespace MovieAssignmentInterfaces
 {
     public class Testclass
     {

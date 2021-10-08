@@ -1,6 +1,6 @@
 using CsvHelper.Configuration.Attributes;
 
-namespace AbstractMovieAssignment.MediaObjects
+namespace MovieAssignmentInterfaces.MediaObjects
 {
     public abstract class Media
     {

@@ -1,7 +1,7 @@
-using AbstractMovieAssignment.MediaObjects;
 using CsvHelper.Configuration;
+using MovieAssignmentInterfaces.MediaObjects;
 
-namespace AbstractMovieAssignment.ClassMaps
+namespace MovieAssignmentInterfaces.ClassMaps
 {
     public class MovieClassMap : ClassMap<Movie>
     {
@@ -10,7 +10,7 @@ namespace AbstractMovieAssignment.ClassMaps
         {
             Map(m => m.Id).Index(0).Name("movieId");
             Map(m => m.title).Index(1).Name("title");
-            Map(m => m.genres).Index(2).Name("genres");
+            Map(m => m.Genres).Index(2).Name("genres");
         }
     }
 }

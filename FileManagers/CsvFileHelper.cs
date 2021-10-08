@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using AbstractMovieAssignment.ClassMaps;
-using AbstractMovieAssignment.MediaObjects;
 using CsvHelper;
 using CsvHelper.Configuration;
+using MovieAssignmentInterfaces.ClassMaps;
+using MovieAssignmentInterfaces.MediaObjects;
 
-namespace AbstractMovieAssignment.FileManagers
+namespace MovieAssignmentInterfaces.FileManagers
 {
-    public class CsvFileHelper
-    {
-        public List<Shows> ShowsList;
-        public List<Movie> MovieList;
-        public List<Video> VideoList;
-        private const string MoviePath = "Files\\movies.csv";
-        private const string ShowPath = "Files\\shows.csv";
-        private const string VideoPath = "Files\\videos.csv";
+    public class CsvFileHelper : IMediaHelper
+   {
+        
+        private const string MoviePath = "Files//movies.csv";
+        private const string ShowPath = "Files//shows.csv";
+        private const string VideoPath = "Files//videos.csv";
+        public List<Shows> ShowsList { get; set; }
+        public List<Movie> MovieList { get; set; }
+        public List<Video> VideoList { get; set; }
+
         public void Shows()
         {
             try
@@ -79,10 +81,10 @@ namespace AbstractMovieAssignment.FileManagers
                 throw;
             }
         }
-        public void ShowAdd(int id, string title, int season, int episode, string writers)
+        public void ShowAdd(int id, string title, int season, int episode, List<string> writers)
         {
 
-            var records = new List<Shows> { new Shows { episode = episode, Id = id, season = season, title = title, writersString = writers } };
+            var records = new List<Shows> { new Shows {episode = episode, Id = id, season = season, title = title, writers = writers} };
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
             using (var stream = File.Open(ShowPath,
                 FileMode.Append))
@@ -94,10 +96,10 @@ namespace AbstractMovieAssignment.FileManagers
             }
 
         }
-        public void VideoAdd(int id, string title, string format, int length, string regions)
+        public void VideoAdd(int id, string title, List<string> format, int length, List<int> regions)
         {
 
-            var records = new List<Video> { new Video { Id = id, title = title, Format = format, Length = length, RegionsString = regions } };
+            var records = new List<Video> { new Video { Id = id, title = title, Format = format, Length = length, Regions = regions } };
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
             using (var stream = File.Open(VideoPath,
                 FileMode.Append))
@@ -108,10 +110,10 @@ namespace AbstractMovieAssignment.FileManagers
                 csv.WriteRecords(records);
             }
         }
-        public void MovieAdd(int id, string title, string genres)
+        public void MovieAdd(int id, string title, List<string> genres)
         {
 
-            var records = new List<Movie> { new Movie { Id = id, title = title, genres = genres } };
+            var records = new List<Movie> { new Movie { Id = id, title = title, Genres = genres } };
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
             using (var stream = File.Open(MoviePath,
                 FileMode.Append))
@@ -194,6 +196,5 @@ namespace AbstractMovieAssignment.FileManagers
             }
         }
 
-
-    }
+   }
 }

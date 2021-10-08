@@ -1,25 +1,28 @@
 using System;
+using System.Collections.Generic;
 using CsvHelper.Configuration.Attributes;
+using MovieAssignmentInterfaces.Converters;
 
-namespace AbstractMovieAssignment.MediaObjects
+namespace MovieAssignmentInterfaces.MediaObjects
 {
     public class Video : Media
     {
 
-        [Name("format")] public string Format { get; set; }
-        [Name("length")] public int Length { get; set; }
-        [Name("regions")] public string RegionsString { get; set; }
-        private int[] Region { get; set; }
-
-        public int[] RegionArray()
-        {
-            Region = Array.ConvertAll(RegionsString.Split('|'), input => Int32.Parse(input));
-            return Region;
-        }
+        [Name("format")] 
+        [TypeConverter(typeof(ToStringArrayConverter))]
+        public List<string> Format { get; set; }
+        
+        [Name("length")]
+        public int Length { get; set; }
+        
+        [Name("regions")] 
+        [TypeConverter(typeof(ToIntArrayConverter))]
+        public List<int> Regions { get; set; }
+        
 
         public override string Display()
         {
-            return $"VideoId:{Id} Title:{title} Format:{Format} Length:{Length} Region(s):{RegionsString}";
+            return $"VideoId:{Id} Title:{title} Format:{String.Join('|',Format)} Length:{Length} Region(s):{String.Join(',',Regions)}";
         }
     }
 }

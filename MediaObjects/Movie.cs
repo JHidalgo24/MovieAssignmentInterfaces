@@ -1,22 +1,21 @@
+using System.Collections.Generic;
 using CsvHelper.Configuration.Attributes;
+using MovieAssignmentInterfaces.Converters;
 
-namespace AbstractMovieAssignment.MediaObjects
+namespace MovieAssignmentInterfaces.MediaObjects
 {
     public class Movie : Media
     {
-        [Name("genres")] public string genres { get; set; }
-        private string[] genresArray { get; set; }
-
-
-        public string[] GenresArray()
-        {
-            genresArray = genres.Split('|');
-            return genresArray;
-        }
-
+        [Name("genres")] 
+        [TypeConverter(typeof(ToStringArrayConverter))]
+        public List<string> Genres { get; set; }
+        
         public override string Display()
         {
-            return $"MovieId:{Id} Title:{title} Genres:{genres}";
+            return $"MovieId:{Id} Title:{title} Genres:{string.Join(',',Genres)}";
+            
+
         }
+
     }
 }
