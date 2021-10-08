@@ -19,6 +19,12 @@ namespace MovieAssignmentInterfaces.FileManagers
         public List<Shows> ShowsList { get; set; }
         public List<Movie> MovieList { get; set; }
         public List<Video> VideoList { get; set; }
+        public CsvFileHelper()//reads the files into their list as soon as CsvFileHelper is made 
+        {
+            Shows();
+            Movies();
+            Videos();
+        }
 
         public void Shows()
         {
@@ -196,5 +202,42 @@ namespace MovieAssignmentInterfaces.FileManagers
             }
         }
 
-   }
+        public void WriteLists()
+        {
+            var movies = MovieList;
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
+            using (var stream = File.Open(MoviePath,
+                FileMode.Append))
+            using (var writer = new StreamWriter(stream))
+            using (var csv = new CsvWriter(writer, config))
+            {
+                csv.Context.RegisterClassMap<MovieClassMap>();//tells the CSVwriter the order to use
+                csv.WriteRecords(movies);
+            }
+
+            //video
+            var videos = VideoList;
+            config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
+            using (var stream = File.Open(VideoPath,
+                FileMode.Append))
+            using (var writer = new StreamWriter(stream))
+            using (var csv = new CsvWriter(writer, config))
+            {
+                csv.Context.RegisterClassMap<VideosClassMap>();//tells the CSVwriter the order to use
+                csv.WriteRecords(videos);
+            }
+            
+            //shows
+            var shows = ShowsList;
+            config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
+            using (var stream = File.Open(ShowPath,
+                FileMode.Append))
+            using (var writer = new StreamWriter(stream))
+            using (var csv = new CsvWriter(writer, config))
+            {
+                csv.Context.RegisterClassMap<ShowClassMap>();//tells the CSVwriter the order to use
+                csv.WriteRecords(shows);
+            }
+        }
+    }
 }

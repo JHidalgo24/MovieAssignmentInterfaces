@@ -36,6 +36,18 @@
       <EmbeddedResource Include="log_file.log">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
+      <None Remove="Files\movies.json" />
+      <EmbeddedResource Include="Files\movies.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Files\shows.json" />
+      <EmbeddedResource Include="Files\shows.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Files\videos.json" />
+      <EmbeddedResource Include="Files\videos.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

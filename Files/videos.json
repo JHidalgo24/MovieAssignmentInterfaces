@@ -1,0 +1,16 @@
+[
+  {
+    "Format": [
+      "VHS",
+      "DVD",
+      "Bluray"
+    ],
+    "Length": 100,
+    "Regions": [
+      0,
+      2
+    ],
+    "Id": 1,
+    "title": "Lethal Weapon 3"
+  }
+]

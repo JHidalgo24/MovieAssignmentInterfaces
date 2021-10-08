@@ -9,20 +9,21 @@ namespace MovieAssignmentInterfaces
 {
     internal class Program
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
-        private static CsvFileHelper CsvFileHelper = new();
-        private static readonly Menu Menu = new();
 
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private static JSONFileHelper FileHelper = new();
+       
+        private static Menu Menu = new();
         private static void Main(string[] args)
         {
+            
             var option = 0;
             var choice = 0;
             while (option != 4)
             {
                 Menu.Display();
                 option = Menu.ValueGetter();
-
-
+                
                 switch (option)
                 {
                     //movies
@@ -30,7 +31,7 @@ namespace MovieAssignmentInterfaces
                         Console.WriteLine("Do you want to\n1.)Display\n2.)Add");
                         logger.Trace("User chose option 1: Movies");
                         choice = Menu.ValueGetter();
-                        CsvFileHelper.Movies();
+                        FileHelper.Movies();
                         switch (choice)
                         {
                             case 1:
@@ -38,14 +39,14 @@ namespace MovieAssignmentInterfaces
                                 logger.Trace("User chose to search movies");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 var search = Console.ReadLine();
-                                CsvFileHelper.SearchMedia("Movie", search);
+                                FileHelper.SearchMedia("Movie", search);
                                 break;
                             }
                             case 2:
                             {
                                 logger.Trace("User chose to add movie");
                                 var genresPicked = new List<string>();
-                                var id = CsvFileHelper.MovieList.Last().Id + 1;
+                                var id = FileHelper.MovieList.Last().Id + 1;
                                 Console.WriteLine("What is the title of the film?");
                                 var title = Console.ReadLine();
                                 Console.WriteLine("What year was the movie made in?");
@@ -57,16 +58,15 @@ namespace MovieAssignmentInterfaces
                                     Console.WriteLine("Enter the year of the film");
                                     title = title + " (" + Console.ReadLine() + ")";
                                 }
-
                                 Console.WriteLine("How many genres do you want to add?");
-                                var genreAmount = Menu.ValueGetter();
-                                string[] genres = new string[genreAmount];
+                                int genreAmount = Menu.ValueGetter();
+                                List<string> genres = new List<string>();
                                 for (var i = 0; i < genreAmount; i++)
                                 {
                                     Console.WriteLine($"What is the {i + 1} genre?");
-                                    genres[i] = Console.ReadLine();
+                                    genres.Add(Console.ReadLine());
                                 }
-                                CsvFileHelper.MovieAdd(id, title, genres.ToList());
+                                FileHelper.MovieAdd(id, title, genres);
                                 break;
                             }
                             default:
@@ -81,7 +81,7 @@ namespace MovieAssignmentInterfaces
                         logger.Trace("User chose option 2: Shows");
                         Console.WriteLine("Do you want to\n1.)Display \n2.)Add");
                         choice = Menu.ValueGetter();
-                        CsvFileHelper.Shows(); //reads the videos file and makes the list for it in the CSVFile Class
+                        FileHelper.Shows(); //reads the videos file and makes the list for it in the CSVFile Class
                         switch (choice)
                         {
                             case 1:
@@ -89,14 +89,14 @@ namespace MovieAssignmentInterfaces
                                 logger.Trace("User chose to search shows");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 var search = Console.ReadLine();
-                                CsvFileHelper.SearchMedia("Show", search);
+                                FileHelper.SearchMedia("Show", search);
                                 break;
                             }
                             case 2:
                             {
                                 logger.Trace("User chose to add show");
                                 var writers = new List<string>();
-                                var id = CsvFileHelper.ShowsList.Last().Id + 1;
+                                var id = FileHelper.ShowsList.Last().Id + 1;
                                 Console.WriteLine("What is the title of the show?");
                                 var title = Console.ReadLine();
                                 while (DuplicateChecker(title, "Show"))
@@ -117,7 +117,7 @@ namespace MovieAssignmentInterfaces
                                     writers.Add(Console.ReadLine());
                                 }
 
-                                CsvFileHelper.ShowAdd(id, title, seasons, episodes, writers);
+                                FileHelper.ShowAdd(id, title, seasons, episodes, writers);
                                 break;
                             }
                             default:
@@ -132,7 +132,7 @@ namespace MovieAssignmentInterfaces
                         logger.Trace("User chose option 3:Videos");
                         Console.WriteLine("Do you want to \n1.)Display\n2.)Add");
                         choice = Menu.ValueGetter();
-                        CsvFileHelper.Videos(); //reads the videos file and makes the list for it in the CSVFile Class
+                        FileHelper.Videos(); //reads the videos file and makes the list for it in the CSVFile Class
                         switch (choice)
                         {
                             case 1:
@@ -140,7 +140,7 @@ namespace MovieAssignmentInterfaces
                                 logger.Trace("User chose to search videos ");
                                 Console.WriteLine("What would you like to search?(Enter for all)");
                                 var search = Console.ReadLine();
-                                CsvFileHelper.SearchMedia("Video", search);
+                                FileHelper.SearchMedia("Video", search);
                                 break;
                             }
                             case 2:
@@ -148,10 +148,10 @@ namespace MovieAssignmentInterfaces
                                 logger.Trace("User chose to add a video");
                                 var regions = new List<int>();
                                 var formats = new List<string>();
-                                var id = CsvFileHelper.VideoList.Last().Id + 1;
+                                int id = FileHelper.VideoList == null ? 1:FileHelper.VideoList.Last().Id + 1 ;
                                 Console.WriteLine("What is the title of the video?");
-                                var title = Console.ReadLine();
-                                while (DuplicateChecker(title, "Video"))
+                                string title = Console.ReadLine();
+                                while (DuplicateChecker(title, "Video") || FileHelper.VideoList != null)
                                 {
                                     Console.WriteLine("This Video already exists enter a new title");
                                     title = Console.ReadLine();
@@ -178,7 +178,7 @@ namespace MovieAssignmentInterfaces
                                     regions.Add(Menu.ValueGetter());
                                 }
 
-                                CsvFileHelper.VideoAdd(id, title, formats, length, regions);
+                                FileHelper.VideoAdd(id, title, formats, length, regions);
                                 break;
                             }
                             default:
@@ -208,8 +208,7 @@ namespace MovieAssignmentInterfaces
             switch (type)
             {
                 case "Movie":
-                    CsvFileHelper.Movies();
-                    foreach (var media in CsvFileHelper.MovieList)
+                    foreach (var media in FileHelper.MovieList)
                         if (media.title.ToLower().Equals(chosenMedia.ToLower()))
                         {
                             contained = true;
@@ -218,8 +217,7 @@ namespace MovieAssignmentInterfaces
 
                     break;
                 case "Show":
-                    CsvFileHelper.Movies();
-                    foreach (var media in CsvFileHelper.MovieList)
+                    foreach (var media in FileHelper.MovieList)
                         if (media.title == chosenMedia)
                         {
                             contained = true;
@@ -228,8 +226,7 @@ namespace MovieAssignmentInterfaces
 
                     break;
                 case "Video":
-                    CsvFileHelper.Videos();
-                    foreach (var media in CsvFileHelper.VideoList)
+                    foreach (var media in FileHelper.VideoList)
                         if (media.title == chosenMedia)
                         {
                             contained = true;
