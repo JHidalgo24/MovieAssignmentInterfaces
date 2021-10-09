@@ -23,12 +23,14 @@ namespace MovieAssignmentInterfaces.FileManagers
             Videos();
         }
         public void WriteLists(){
-            string json = JsonConvert.SerializeObject(MovieList, Formatting.Indented);
-            File.WriteAllText(MoviePath, json);
-            json = JsonConvert.SerializeObject(VideoList, Formatting.Indented);
-            File.WriteAllText(VideoPath, json); 
-            json =  JsonConvert.SerializeObject(ShowsList, Formatting.Indented);
-            File.WriteAllText(ShowPath, json);
+            string jsonMovie = JsonConvert.SerializeObject(MovieList, Formatting.Indented);
+            File.WriteAllText(MoviePath, jsonMovie);
+           
+            string jsonVideo = JsonConvert.SerializeObject(VideoList, Formatting.Indented);
+            File.WriteAllText(VideoPath, jsonVideo); 
+            
+            string jsonShow =  JsonConvert.SerializeObject(ShowsList, Formatting.Indented);
+            File.WriteAllText(ShowPath, jsonShow);
         }
 
         public void Shows()
@@ -104,7 +106,7 @@ namespace MovieAssignmentInterfaces.FileManagers
             temp.Length = length;
             temp.Regions = regions;
             VideoList.Add(temp);
-            string json = JsonConvert.SerializeObject(MovieList, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(VideoList, Formatting.Indented);
             File.WriteAllText(VideoPath, json);
         }
 

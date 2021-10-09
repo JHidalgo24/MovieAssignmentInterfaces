@@ -12,7 +12,7 @@ namespace MovieAssignmentInterfaces
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private static JSONFileHelper FileHelper = new();
-       
+       private static CsvFileHelper FileHelper2 = new();
         private static Menu Menu = new();
         private static void Main(string[] args)
         {
@@ -151,7 +151,7 @@ namespace MovieAssignmentInterfaces
                                 int id = FileHelper.VideoList == null ? 1:FileHelper.VideoList.Last().Id + 1 ;
                                 Console.WriteLine("What is the title of the video?");
                                 string title = Console.ReadLine();
-                                while (DuplicateChecker(title, "Video") || FileHelper.VideoList != null)
+                                while (DuplicateChecker(title, "Video"))
                                 {
                                     Console.WriteLine("This Video already exists enter a new title");
                                     title = Console.ReadLine();

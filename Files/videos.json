@@ -12,5 +12,19 @@
     ],
     "Id": 1,
     "title": "Lethal Weapon 3"
+  },
+  {
+    "Format": [
+      "DVD",
+      "VHS"
+    ],
+    "Length": 120,
+    "Regions": [
+      1,
+      2,
+      3
+    ],
+    "Id": 2,
+    "title": "Narnia"
   }
 ]
