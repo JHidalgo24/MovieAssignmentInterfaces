@@ -7,7 +7,7 @@ using System;
 
 namespace MovieAssignmentInterfaces.FileManagers
 {
-    public class JSONFileHelper: IMediaHelper
+    public class JSONFileHelper : IMediaHelper
     {
         private const string MoviePath = "Files//movies.json";
         private const string ShowPath = "Files//shows.json";
@@ -22,14 +22,15 @@ namespace MovieAssignmentInterfaces.FileManagers
             Movies();
             Videos();
         }
-        public void WriteLists(){
+        public void WriteLists()
+        {
             string jsonMovie = JsonConvert.SerializeObject(MovieList, Formatting.Indented);
             File.WriteAllText(MoviePath, jsonMovie);
-           
+
             string jsonVideo = JsonConvert.SerializeObject(VideoList, Formatting.Indented);
-            File.WriteAllText(VideoPath, jsonVideo); 
-            
-            string jsonShow =  JsonConvert.SerializeObject(ShowsList, Formatting.Indented);
+            File.WriteAllText(VideoPath, jsonVideo);
+
+            string jsonShow = JsonConvert.SerializeObject(ShowsList, Formatting.Indented);
             File.WriteAllText(ShowPath, jsonShow);
         }
 
@@ -71,8 +72,8 @@ namespace MovieAssignmentInterfaces.FileManagers
                 Console.WriteLine("Could not read JSON file to List");
             }
         }
-        
-    
+
+
         public void ShowAdd(int id, string title, int season, int episode, List<string> writers)
         {
             Shows temp = new Shows();
@@ -93,8 +94,8 @@ namespace MovieAssignmentInterfaces.FileManagers
             temp.title = title;
             temp.Genres = genres;
             MovieList.Add(temp);
-            string json = JsonConvert.SerializeObject(MovieList,Formatting.Indented);       
-            File.WriteAllText(MoviePath,json);
+            string json = JsonConvert.SerializeObject(MovieList, Formatting.Indented);
+            File.WriteAllText(MoviePath, json);
         }
 
         public void VideoAdd(int id, string title, List<string> format, int length, List<int> regions)
@@ -116,25 +117,25 @@ namespace MovieAssignmentInterfaces.FileManagers
             {
                 case "Show":
                     {
-                    if (title != "")
-                    {
-                        foreach (var show in ShowsList)
+                        if (title != "")
                         {
-                            if (show.title.ToLower().Contains(title.ToLower()))
+                            foreach (var show in ShowsList)
+                            {
+                                if (show.title.ToLower().Contains(title.ToLower()))
+                                {
+                                    Console.WriteLine(show.Display());
+                                }
+
+                            }
+                        }
+                        else if (title == "")
+                        {
+                            foreach (var show in ShowsList)
                             {
                                 Console.WriteLine(show.Display());
                             }
-
                         }
-                    }
-                    else if (title == "")
-                    {
-                        foreach (var show in ShowsList)
-                        {
-                            Console.WriteLine(show.Display());
-                        }
-                    }
-                    break;
+                        break;
                     }
                 case "Movie":
                     {

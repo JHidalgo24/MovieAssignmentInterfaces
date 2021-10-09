@@ -11,8 +11,8 @@ using MovieAssignmentInterfaces.MediaObjects;
 namespace MovieAssignmentInterfaces.FileManagers
 {
     public class CsvFileHelper : IMediaHelper
-   {
-        
+    {
+
         private const string MoviePath = "Files//movies.csv";
         private const string ShowPath = "Files//shows.csv";
         private const string VideoPath = "Files//videos.csv";
@@ -90,7 +90,7 @@ namespace MovieAssignmentInterfaces.FileManagers
         public void ShowAdd(int id, string title, int season, int episode, List<string> writers)
         {
 
-            var records = new List<Shows> { new Shows {episode = episode, Id = id, season = season, title = title, writers = writers} };
+            var records = new List<Shows> { new Shows { episode = episode, Id = id, season = season, title = title, writers = writers } };
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };
             using (var stream = File.Open(ShowPath,
                 FileMode.Append))
@@ -226,7 +226,7 @@ namespace MovieAssignmentInterfaces.FileManagers
                 csv.Context.RegisterClassMap<VideosClassMap>();//tells the CSVwriter the order to use
                 csv.WriteRecords(videos);
             }
-            
+
             //shows
             var shows = ShowsList;
             config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, };

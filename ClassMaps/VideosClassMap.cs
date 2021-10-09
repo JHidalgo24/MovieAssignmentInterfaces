@@ -3,7 +3,7 @@ using MovieAssignmentInterfaces.MediaObjects;
 
 namespace MovieAssignmentInterfaces.ClassMaps
 {
-    public class VideosClassMap:ClassMap<Video>
+    public class VideosClassMap : ClassMap<Video>
     {
         public VideosClassMap()
         {

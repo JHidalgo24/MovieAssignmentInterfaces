@@ -8,23 +8,14 @@ namespace MovieAssignmentInterfaces.MediaObjects
     {
         [Name("season")] public int season { get; set; }
         [Name("episode")] public int episode { get; set; }
-        
-        [Name("writers")] 
+
+        [Name("writers")]
         [TypeConverter(typeof(ToStringArrayConverter))]
         public List<string> writers { get; set; }
 
-      
-      
-      
-      
-      
-      
-      
-      
-
         public override string Display()
         {
-            return $"ShowId:{Id} Title:{title} Seasons:{season} Episodes:{episode} Writers:{string.Join('|',writers)} ";
+            return $"ShowId:{Id} Title:{title} Seasons:{season} Episodes:{episode} Writers:{string.Join('|', writers)} ";
         }
     }
 }

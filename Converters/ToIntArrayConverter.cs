@@ -20,6 +20,6 @@ namespace MovieAssignmentInterfaces.Converters
         {
             return string.Join('|', ((List<int>)value).ToArray());
         }
-        
+
     }
 }

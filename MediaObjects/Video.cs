@@ -8,21 +8,21 @@ namespace MovieAssignmentInterfaces.MediaObjects
     public class Video : Media
     {
 
-        [Name("format")] 
+        [Name("format")]
         [TypeConverter(typeof(ToStringArrayConverter))]
         public List<string> Format { get; set; }
-        
+
         [Name("length")]
         public int Length { get; set; }
-        
-        [Name("regions")] 
+
+        [Name("regions")]
         [TypeConverter(typeof(ToIntArrayConverter))]
         public List<int> Regions { get; set; }
-        
+
 
         public override string Display()
         {
-            return $"VideoId:{Id} Title:{title} Format:{String.Join('|',Format)} Length:{Length} Region(s):{String.Join(',',Regions)}";
+            return $"VideoId:{Id} Title:{title} Format:{String.Join('|', Format)} Length:{Length} Region(s):{String.Join(',', Regions)}";
         }
     }
 }

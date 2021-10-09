@@ -9,12 +9,12 @@ namespace MovieAssignmentInterfaces.Converters
     {
         public override object ConvertFromString(string text, IReaderRow row, MemberMapData memberMapData)
         {
-            if (text == "") 
-            {return new List<string>();}
+            if (text == "")
+            { return new List<string>(); }
             string[] allElements = text.Split('|');
-            return new List<string>(allElements);  
-            
-            
+            return new List<string>(allElements);
+
+
         }
 
         public override string ConvertToString(object value, IWriterRow row, MemberMapData memberMapData)

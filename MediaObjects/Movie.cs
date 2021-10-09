@@ -6,14 +6,14 @@ namespace MovieAssignmentInterfaces.MediaObjects
 {
     public class Movie : Media
     {
-        [Name("genres")] 
+        [Name("genres")]
         [TypeConverter(typeof(ToStringArrayConverter))]
         public List<string> Genres { get; set; }
-        
+
         public override string Display()
         {
-            return $"MovieId:{Id} Title:{title} Genres:{string.Join(',',Genres)}";
-            
+            return $"MovieId:{Id} Title:{title} Genres:{string.Join(',', Genres)}";
+
 
         }
 
