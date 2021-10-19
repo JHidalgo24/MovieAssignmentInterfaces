@@ -8,18 +8,18 @@ namespace MovieAssignmentInterfaces
 {
     internal class Program
     {
-        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private static readonly JSONFileHelper FileHelper = new();
-        private static readonly Menu Menu = new();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private static JSONFileHelper FileHelper = new();//you can change JSONFileHelper to CSVFileHelper and should still work  
+        private static Menu Menu = new();//helps with menu options and getting ints
 
         private static void Main(string[] args)
         {
-            var option = 0;
-            var choice = 0;
+            var option = 0;//picks the media
             while (option != 4)
             {
                 Menu.Display();
                 option = Menu.ValueGetter();
+                var choice = 0;//picks for the options inside the media 
                 switch (option)
                 {
                     //movies
