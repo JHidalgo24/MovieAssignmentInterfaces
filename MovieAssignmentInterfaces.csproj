@@ -33,9 +33,6 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
       <None Remove="log_file.log" />
-      <EmbeddedResource Include="log_file.log">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </EmbeddedResource>
       <None Remove="Files\movies.json" />
       <EmbeddedResource Include="Files\movies.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
