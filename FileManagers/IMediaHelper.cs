@@ -16,7 +16,7 @@ namespace MovieAssignmentInterfaces.FileManagers
         public abstract void ShowAdd(int id, string title, int season, int episode, List<string> writers);
         public abstract void MovieAdd(int id, string title, List<string> genres);
         public abstract void VideoAdd(int id, string title, List<string> format, int length, List<int> regions);
-        public abstract void SearchMedia(string type, string title);
+        public abstract void SearchMedia(string title);
     }
 
 }

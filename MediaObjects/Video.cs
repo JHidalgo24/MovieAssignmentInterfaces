@@ -22,7 +22,7 @@ namespace MovieAssignmentInterfaces.MediaObjects
 
         public override string Display()
         {
-            return $"VideoId:{Id} Title:{title} Format:{String.Join('|', Format)} Length:{Length} Region(s):{String.Join(',', Regions)}";
+            return $"Type:Video VideoId:{Id} Title:{title} Format:{String.Join('|', Format)} Length:{Length} Region(s):{String.Join(',', Regions)}";
         }
     }
 }

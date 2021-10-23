@@ -15,7 +15,7 @@ namespace MovieAssignmentInterfaces
         private static void Main(string[] args)
         {
             var option = 0;//picks the media
-            while (option != 4)
+            while (option != 5)
             {
                 Menu.Display();
                 option = Menu.ValueGetter();
@@ -236,6 +236,10 @@ namespace MovieAssignmentInterfaces
                         break;
                     //Exit
                     case 4:
+                        Console.WriteLine("What do you want to search from all Media?");
+                        FileHelper.SearchMedia(Console.ReadLine());
+                        break;
+                    case 5:
                         logger.Debug("User exited the program");
                         Console.WriteLine("Goodbye!");
                         break;

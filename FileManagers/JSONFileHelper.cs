@@ -110,79 +110,27 @@ namespace MovieAssignmentInterfaces.FileManagers
             string json = JsonConvert.SerializeObject(VideoList, Formatting.Indented);
             File.WriteAllText(VideoPath, json);
         }
+        
 
-        public void SearchMedia(string type, string title)
+        public void SearchMedia(string title)
         {
-            switch (type)
+            List<Media> foundMedia = new List<Media>();
+            
+            MovieList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+            ShowsList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+            VideoList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+
+            foreach (var x in foundMedia)
             {
-                case "Show":
-                    {
-                        if (title != "")
-                        {
-                            foreach (var show in ShowsList)
-                            {
-                                if (show.title.ToLower().Contains(title.ToLower()))
-                                {
-                                    Console.WriteLine(show.Display());
-                                }
-
-                            }
-                        }
-                        else if (title == "")
-                        {
-                            foreach (var show in ShowsList)
-                            {
-                                Console.WriteLine(show.Display());
-                            }
-                        }
-                        break;
-                    }
-                case "Movie":
-                    {
-                        Movies();
-                        if (title != "")
-                        {
-                            foreach (var movie in MovieList)
-                            {
-                                if (movie.title.ToLower().Contains(title.ToLower()))
-                                {
-                                    Console.WriteLine(movie.Display());
-                                }
-
-                            }
-                        }
-                        else if (title == "")
-                        {
-                            foreach (var movie in MovieList)
-                            {
-                                Console.WriteLine(movie.Display());
-                            }
-                        }
-                    }
-                    break;
-                case "Video":
-                    {
-                        if (title != "")
-                        {
-                            foreach (var video in VideoList)
-                            {
-                                if (video.title.ToLower().Contains(title.ToLower()))
-                                {
-                                    Console.WriteLine(video.Display());
-                                }
-
-                            }
-                        }
-                        else if (title == "")
-                        {
-                            foreach (var video in VideoList)
-                            {
-                                Console.WriteLine(video.Display());
-                            }
-                        }
-                    }
-                    break;
+                Console.WriteLine(x.Display());
             }
+
+            
+
+            
+
+
+
         }
     }
 }

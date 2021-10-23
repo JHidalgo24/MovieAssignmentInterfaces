@@ -130,76 +130,9 @@ namespace MovieAssignmentInterfaces.FileManagers
                 csv.WriteRecords(records);
             }
         }
-        public void SearchMedia(string type, string title)
+        public void SearchMedia(string title)
         {
-            switch (type)
-            {
-                case "Show":
-                    if (title != "")
-                    {
-                        foreach (var show in ShowsList)
-                        {
-                            if (show.title.ToLower().Contains(title.ToLower()))
-                            {
-                                Console.WriteLine(show.Display());
-                            }
-
-                        }
-                    }
-                    else if (title == "")
-                    {
-                        foreach (var show in ShowsList)
-                        {
-                            Console.WriteLine(show.Display());
-                        }
-                    }
-                    break;
-                case "Movie":
-                    {
-                        Movies();
-                        if (title != "")
-                        {
-                            foreach (var movie in MovieList)
-                            {
-                                if (movie.title.ToLower().Contains(title.ToLower()))
-                                {
-                                    Console.WriteLine(movie.Display());
-                                }
-
-                            }
-                        }
-                        else if (title == "")
-                        {
-                            foreach (var movie in MovieList)
-                            {
-                                Console.WriteLine(movie.Display());
-                            }
-                        }
-                    }
-                    break;
-                case "Video":
-                    {
-                        if (title != "")
-                        {
-                            foreach (var video in VideoList)
-                            {
-                                if (video.title.ToLower().Contains(title.ToLower()))
-                                {
-                                    Console.WriteLine(video.Display());
-                                }
-
-                            }
-                        }
-                        else if (title == "")
-                        {
-                            foreach (var video in VideoList)
-                            {
-                                Console.WriteLine(video.Display());
-                            }
-                        }
-                    }
-                    break;
-            }
+            
         }
 
         public void WriteLists()

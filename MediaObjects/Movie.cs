@@ -12,7 +12,7 @@ namespace MovieAssignmentInterfaces.MediaObjects
 
         public override string Display()
         {
-            return $"MovieId:{Id} Title:{title} Genres:{string.Join(',', Genres)}";
+            return $"Type:Movie MovieId:{Id} Title:{title} Genres:{string.Join(',', Genres)}";
 
 
         }

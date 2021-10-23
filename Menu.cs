@@ -21,7 +21,7 @@ namespace MovieAssignmentInterfaces
         }
         public void Display()
         {
-            Console.WriteLine("What Type of media do you want to display?\n1.)Movies\n2.)Shows\n3.)Videos\n4.)Exit");
+            Console.WriteLine("What Type of media do you want to display?\n1.)Movies\n2.)Shows\n3.)Videos\n4.)Search Media\n5.)Exit");
         }
     }
 }

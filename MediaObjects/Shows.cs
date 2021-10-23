@@ -15,7 +15,7 @@ namespace MovieAssignmentInterfaces.MediaObjects
 
         public override string Display()
         {
-            return $"ShowId:{Id} Title:{title} Seasons:{season} Episodes:{episode} Writers:{string.Join('|', writers)} ";
+            return $"Type:Show ShowId:{Id} Title:{title} Seasons:{season} Episodes:{episode} Writers:{string.Join('|', writers)} ";
         }
     }
 }
