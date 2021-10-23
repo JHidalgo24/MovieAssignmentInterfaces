@@ -132,7 +132,17 @@ namespace MovieAssignmentInterfaces.FileManagers
         }
         public void SearchMedia(string title)
         {
+           List<Media> foundMedia = new List<Media>();
             
+            MovieList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+            ShowsList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+            VideoList.Where(c => c.title.ToLower().Contains(title.ToLower())).ToList().ForEach(c => foundMedia.Add(c));
+
+            System.Console.WriteLine($"There are {foundMedia.Count} matched searches! for '{title}'");
+            foreach (var x in foundMedia)
+            {
+                Console.WriteLine(x.Display());
+            } 
         }
 
         public void WriteLists()
